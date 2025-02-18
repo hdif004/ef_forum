@@ -8,13 +8,20 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/oussa/OneDrive/Bureau/LP MI AW/ef-316/ef_forum/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>C:/Users/oussa/OneDrive/Bureau/LP MI AW/ef-316/ef_forum/templates/home/index.html.twig</code></li>
-    </ul>
+<div class="login">
+    <h1>Welcome to the EF Forum</h1>
+    <p>Here you can find all the information you need to know about the EF Forum</p>
+    <p>Click on the links above to navigate through the forum</p>
+    <a href="{{ path('app_user_new') }}">Login</a>
 </div>
+
+<div class="les sujets">
+    <h2>Les sujets</h2>
+    <p>Voici les sujets les plus récents</p>
+    <ul>
+        {% for sujet in sujets %}
+            <li>{{ sujets.title }}</li>
+            <li><a href="{{ path('app_sujet_show', {'id': sujet.id}) }}">Voir le sujet</a></li>
+        {% endfor %}
+    </ul>
 {% endblock %}
