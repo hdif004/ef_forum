@@ -12,6 +12,7 @@
         "symfony/flex": "^2",
         "symfony/framework-bundle": "7.2.*",
         "symfony/runtime": "7.2.*",
+        "symfony/twig-pack": "*",
         "symfony/webapp-pack": "*",
         "symfony/yaml": "7.2.*"
     },
