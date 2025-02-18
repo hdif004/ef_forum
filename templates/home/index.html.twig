@@ -10,18 +10,12 @@
 
 <div class="login">
     <h1>Welcome to the EF Forum</h1>
-    <p>Here you can find all the information you need to know about the EF Forum</p>
-    <p>Click on the links above to navigate through the forum</p>
     <a href="{{ path('app_user_new') }}">Login</a>
 </div>
 
 <div class="les sujets">
     <h2>Les sujets</h2>
-    <p>Voici les sujets les plus récents</p>
     <ul>
-        {% for sujet in sujets %}
-            <li>{{ sujets.title }}</li>
-            <li><a href="{{ path('app_sujet_show', {'id': sujet.id}) }}">Voir le sujet</a></li>
-        {% endfor %}
-    </ul>
+        <li><a href="{{ path('app_sujets_new') }}">Créer un sujet</a></li>
+        <li><a href="{{ path('app_sujets_index') }}">Liste des sujets</a></li>
 {% endblock %}
